@@ -171,7 +171,7 @@
         justify-content: center;
     }
     .column_art__gallery img{
-        width: 90%;
+        width: 80%;
         margin: 15px;
         transition: all 0.3s ease 0s;
     }

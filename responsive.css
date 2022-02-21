@@ -173,10 +173,12 @@
     .column_art__gallery img{
         width: 80%;
         margin: 15px;
+        opacity: 0.5;
         transition: all 0.3s ease 0s;
     }
     .column_art__gallery img:hover{
         width: 95%;
+        opacity: 1;
     }
 }
 

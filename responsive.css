@@ -134,36 +134,9 @@
         height: 4.2rem;
         width: 4.2rem;
     }
-    .graphic__design__offers{
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .offer__card{
-        height: 240px;
-        width: 50%;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-        border-radius: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        width: max-content;
-        width: 45%;
-        height: 120px;
-        border-top: solid #d300be;
-        border-left: solid #d300be;        
-        background: linear-gradient(to right bottom, #000000b6 , #4900f457);
-
-    }
-    .offer__card .sub__heading__section{
-        font-family: 'Festive';
-        font-size: 25px;
-        font-weight: 100;
-        margin-top: 10px;
-    }
     .art__gallery{
-        display: flex;        
+        display: flex;
+        margin-right: 15px;
     }
     .column_art__gallery{
         display: flex;
@@ -173,7 +146,7 @@
     .column_art__gallery img{
         width: 80%;
         margin: 15px;
-        opacity: 0.5;
+        opacity: 0.4;
         transition: all 0.3s ease 0s;
     }
     .column_art__gallery img:hover{

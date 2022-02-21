@@ -12,6 +12,7 @@ $( "#design_tab" ).click(function() {
     $( "#design__section" ).show();
     $( "#design_tab" ).addClass('active');
     $( "#develop_tab" ).removeClass('active');
+    $( "#art_tab" ).removeClass('active');
   });
   // When Develop Tab is clicked
 $( "#develop_tab" ).click(function() {

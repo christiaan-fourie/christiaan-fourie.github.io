@@ -6,6 +6,10 @@
     .sidebar{
         height: 100vh;
     }
+    .content{
+        margin-bottom: 0px;
+        padding-bottom: 5%;
+    }
     .navigationSpace{
         bottom: 0vh;
         position: fixed;
@@ -17,12 +21,14 @@
         justify-content: center;
     }
     .nav__icons button{
+        background: linear-gradient(to bottom left, #4900f4de, #4900f475, #4900f4e1);
         font-size: 15px;
         border-radius: 0px;
         margin-top: 0px;
     }
     .nav__icons .active{
         font-size: 15px;
+        background: linear-gradient(to bottom left, #d300becb, #d300be70);
     }
     .my__greetings{
         font-size: 120px;

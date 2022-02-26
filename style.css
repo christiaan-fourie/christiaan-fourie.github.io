@@ -9,7 +9,7 @@
 
 .content p{
     font-family: 'Raleway';
-    margin-top: 1rem;
+    padding-top: 1rem;
 }
 .content{
     overflow-y: scroll;

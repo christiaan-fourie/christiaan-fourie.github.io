@@ -8,11 +8,8 @@
     }
     .content{
         margin-bottom: 0px;
-        padding-bottom: 30%;
+        padding-bottom: 30vh;
     }
-    .design__section, .development__section, .art__section{
-        margin-bottom: 10%;
-    } 
     .navigationSpace{
         bottom: 0vh;
         position: fixed;

@@ -7,7 +7,7 @@
         height: 100vh;
     }
     .navigationSpace{
-        top: 10px;
+        top: 10vh;
         right: 0px;
         height: 100vh;
         position: fixed;
@@ -17,6 +17,11 @@
     }
     .nav__icons .active{
         font-size: 18px;
+    }
+    .my__greetings{
+        font-size: 120px;
+        margin-top: 10vh;
+        color: whitesmoke;
     }
 }
 

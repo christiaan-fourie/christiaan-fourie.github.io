@@ -7,16 +7,22 @@
         height: 100vh;
     }
     .navigationSpace{
-        top: 10vh;
-        right: 0px;
-        height: 100vh;
+        bottom: 0vh;
         position: fixed;
+        width: 100vw;
+    }
+    .nav__icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
     .nav__icons button{
         font-size: 15px;
+        border-radius: 0px;
+        margin-top: 0px;
     }
     .nav__icons .active{
-        font-size: 18px;
+        font-size: 15px;
     }
     .my__greetings{
         font-size: 120px;

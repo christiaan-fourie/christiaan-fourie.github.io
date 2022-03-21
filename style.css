@@ -125,6 +125,11 @@
 .my__social i:hover{
     font-size: 2em;
 }
+
+
+.zest_link{
+    color: whitesmoke;
+}
 .content{
     margin: 5%;
     color: whitesmoke;

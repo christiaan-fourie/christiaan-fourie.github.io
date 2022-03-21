@@ -129,6 +129,10 @@
 
 .zest_link{
     color: whitesmoke;
+    font-style: none;
+}
+.zest_link:hover{
+    color: rgb(164, 227, 243);
 }
 .content{
     margin: 5%;

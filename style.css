@@ -121,6 +121,7 @@
     margin-right: 0.5em;
     transition: all 0.3s ease 0s;
     font-size: 1.8em;  
+    transition: all 0.3s ease 0s;
 }
 .my__social i:hover{
     font-size: 2em;
@@ -129,7 +130,7 @@
 
 .zest_link{
     color: whitesmoke;
-    font-style: none;
+    text-decoration: none;
 }
 .zest_link:hover{
     color: rgb(164, 227, 243);

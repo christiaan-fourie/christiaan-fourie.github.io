@@ -85,10 +85,10 @@
     height: 6rem;
     width: 6rem;
     border-radius: 50%;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0.5rem;
 }
 .my__greetings{
     font-size: 100px;
@@ -103,9 +103,10 @@
     color: whitesmoke;
     font-family: 'Festive';
     font-weight: 100;
+    line-height: 36px;
+    margin-top: 0.5em;
 }
 .my__title{
-    margin-top: 2rem;
     color: whitesmoke;
     font-family: 'Raleway';
     font-weight: 100;

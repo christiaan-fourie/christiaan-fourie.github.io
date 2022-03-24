@@ -69,7 +69,6 @@
 }
 .nav__icons .active{        
     background: linear-gradient(to bottom left, #d300be9c, #d300be1f);
-    font-size: 25px;
     border-bottom: solid #d300be;
 }
 .navigationSpace{

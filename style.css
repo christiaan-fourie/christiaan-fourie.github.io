@@ -10,18 +10,20 @@
 }
 body{    
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #1e1c27;
 }
 header{    
     color: #fff;
     text-align: center;
-    margin: 0px 82px;
+    display: flex;
+    flex-direction: column;
+    background-color: #00000027;
 }
 .profile_pic img{
     width: 33%;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 8%;
 }
 .profile_pic {
     display: flex;
@@ -35,6 +37,8 @@ h4, p {
 }
 .page{
     text-align: center;
+    display: flex;    
+    flex-direction: row;
     color: #fff;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -45,22 +49,181 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
+button.download_btn {
+    height: 74px;
+    width: 287px;
+    border-radius: 18px;
+    background: #5CE1E6;
+    color: black;
+    font-size: 25px;
+    margin-bottom: 41px;
+}
+button.download_btn:hover {
+    cursor: pointer;
+}
+div.download_area {
+    display: flex;
+    justify-content: center;
+}
+body{
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.profile_pic{
+    flex: 1;
+    overflow: visible;
+}
+.description{
+    flex: 2;
+}
+.profile_pic img{
+    width: 270px;
+    height: 270px;
+    border-radius: 8%;
+    margin: 5rem;
+}
+.description {
+    margin: 5rem;
+
+}
+h1{
+    font-size: 63px;
+    font-weight: 900;
+    line-height: 4rem;
+}
+h4{
+    font-size: 22px;
+    color: #5CE1E6;
+    line-height: 65px;
+}
+h5{
+    font-weight: 600;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5rem;
+}
+h6{
+    font-weight: 100;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.3rem;
+    margin-bottom: 2rem;
+}
+p{
+    font-weight: 300;
+    font-size: 18px;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.page{
+    flex-direction: column;
+    text-align: center;
+    margin-top: 85px;
+    padding-bottom: 50px;
+    overflow-y: visible;
+}
+.left_sidebar {
+    flex: 5;
+}
+.right_sidebar{
+    flex: 6;
+}
+.second_sidebar_left{
+    flex: 6;
+}
+.second_sidebar_right{
+    flex: 5;
+}
+ul{ 
+    margin-left: 1rem;
+    list-style-type: disc;
+    overflow: visible;
+}
+ul li{
+    margin-bottom: 2rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.skills_area {
+    display: flex;
+    flex-direction: row;
+}
+.skills_area_left {
+    flex: 1;
+}
+.skills_area_right {
+    flex: 1;
+}
+progress[value] {  
+    width: 180px;
+    height: 40px;
+}
+.second_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000027;
+}
+.second_header h1 {
+    flex: 1;
+    color: white;
+    text-align: end;
+}
+.second_header div {
+    flex: 1;
+}
+
+.my__social{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+.my__social i{
+    margin-left: 1em;
+    margin-right: 1em;
+    transition: all 0.3s ease 0s;
+    font-size: 1.8em;  
+    transition: all 0.3s ease 0s;
+}
+.my__social a{
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 25px;
+    padding-top: 55px;
+}
+.my__social a:hover{
+    padding: 28px;
+    transition: all 0.4s ease 0s;
+}
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-
-
+@media (min-width: 576px) {     
+    
  }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-    body{
-        padding-left: 15%;
-        padding-right: 15%;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        overflow-x: hidden;
-        overflow-y: scroll;
+    
+}
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .page {        
+        flex-direction: row;
+        text-align: left;
+    }
+    body {        
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 65px;
     }
     header{
         text-align: left;
@@ -68,148 +231,27 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: row;
         background-color: #00000027;
     }
-    .profile_pic{
-        flex: 1;
-        overflow: visible;
-    }
-    .description{
-        flex: 2;
-    }
-    .profile_pic img{
-        width: 270px;
-        height: 270px;
-        border-radius: 8%;
-        margin: 5rem;
-    }
-    .description {
-        margin: 5rem;
-    
-    }
-    h1{
-        font-size: 63px;
-        font-weight: 900;
-        line-height: 4rem;
-    }
-    h4{
-        font-size: 22px;
-        color: #5CE1E6;
-        line-height: 65px;
-    }
-    h5{
-        font-weight: 600;
-        color: #fff;
-        font-size: 20px;
-        line-height: 1.5rem;
-    }
-    h6{
-        font-weight: 100;
-        color: #fff;
-        font-size: 18px;
-        line-height: 1.3rem;
-        margin-bottom: 2rem;
-    }
-    p{
-        font-weight: 300;
-        font-size: 18px;
-        color: #fff;
-        margin: 1rem 0;
-    }
-    
-    .page{
-        display: flex;
-        text-align: left;
-        margin-top: 85px;
-        padding-bottom: 50px;
-        overflow-y: visible;
-    }
-    .left_sidebar {
-        flex: 5;
+    .left_sidebar {        
         border-right: 2px solid #fff;
         border-color: #5CE1E6;
     }
-    .right_sidebar{
-        flex: 6;
+    .right_sidebar {        
         margin-left: 123px;
     }
-    ul{ 
-        margin-left: 1rem;
-        list-style-type: disc;
-        overflow: visible;
+    .second_sidebar_right {        
+        margin-left: 54px;
     }
-    ul li{
-        margin-bottom: 2rem;
-        color: #fff;
-        font-family: 'Poppins', sans-serif;
-    }
-    .skills_area {
-        display: flex;
-        flex-direction: row;
-    }
-    .skills_area_left {
-        flex: 1;
-    }
-    .skills_area_right {
-        flex: 1;
-    }
-    progress[value] {  
-        width: 180px;
-        height: 40px;
-    }
-    .second_header{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        background-color: #00000027;
-    }
-    .second_header h1 {
-        flex: 1;
-        color: white;
-        text-align: end;
-    }
-    .second_header div {
-        flex: 1;
-    }
-    
-    .my__social{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 2rem;
-        text-align: center;
-    }
-    .my__social i{
-        margin-left: 1em;
-        margin-right: 1em;
-        transition: all 0.3s ease 0s;
-        font-size: 1.8em;  
-        transition: all 0.3s ease 0s;
-    }
-    .my__social a{
-        font-family: "Poppins", sans-serif;
-        text-decoration: none;
-        color: white;
-        padding: 25px;
-        padding-top: 55px;
-    }
-    .my__social a:hover{
-        padding: 28px;
-        transition: all 0.4s ease 0s;
-    }
-
-
- }
-
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-    
-
 
  }
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
     
+    body {        
+        padding-left: 12%;
+        padding-right: 12%;
+        padding-top: 65px;
+    }
 
 
  }

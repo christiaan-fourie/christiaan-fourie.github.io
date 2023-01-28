@@ -148,6 +148,7 @@ ul li{
     margin-bottom: 2rem;
     color: #fff;
     font-family: 'Poppins', sans-serif;
+    line-height: normal;
 }
 .skills_area {
     display: flex;

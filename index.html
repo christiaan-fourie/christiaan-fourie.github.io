@@ -7,7 +7,35 @@
     <title>Visual Artist & Designer</title>
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
     <style>
+      .icon-row {
+        display: flex;
+      }
+      
+      .icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        margin-right: 27px;
+        background-color: #ffffff00;
+          border: 1px solid #5CE1E6;
+          border-radius: 25px;
+          transition: transform 0.3s;
+        }
+
+        .icon-container:hover {
+          transform: scale(1.1);
+        }
+
+        .fa {
+          font-size: 20px;
+          color: #5CE1E6;
+        }
+    
       canvas {
         position: fixed;
         top: 0;
@@ -108,6 +136,23 @@
       <div class="description">
         <h1>Christiaan Fourie</h1>
         <h4>Visual Artist & Designer</h4>
+        <div class="icon-row">
+          <a target="_blank" href="https://github.com/iam-krist" class="icon-container">
+            <i class="fa fa-github"></i>
+          </a>
+          <a target="_blank" href="https://www.instagram.com/_i_am_krist_/?hl=en" class="icon-container">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a target="_blank" href="https://wa.me/+27718737005" class="icon-container">
+            <i class="fa fa-whatsapp"></i>
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/iamkrist" class="icon-container">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a target="_blank" href="https://codepen.io/iam-krist" class="icon-container">
+            <i class="fa fa-codepen"></i>
+          </a>
+        </div>
         <!-- <p>
           Hi! I'm Christiaan, I am a 23 year old guy that loves the world of
           Technology & User Experience.

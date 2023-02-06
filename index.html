@@ -68,10 +68,34 @@
         transition: all 1s;
       } 
       .btn:hover {
-        font-size: x-large;
+        background-color: #000000;
+        color: aqua;
       }
-      
-
+      iframe {        
+        box-shadow: 5px 5px 20px 0px #000000;
+        opacity: 0.8;
+      }
+      .projectIframe {
+        overflow: hidden;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        transform-origin: 0 0;
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        margin-top: -35px; 
+        margin-left: -50px;
+        border-radius: 15px;
+        border: none;
+        transition: all 0.5s;
+      }
+      .projectIframe:hover {
+        -webkit-transform: scale(0.55);
+        transform: scale(0.55);
+      }
+      .iframe-container {
+        overflow: hidden;
+      }
     </style>
   </head>
   <body>
@@ -135,17 +159,46 @@
       </div>
     </div>
     <div style="width: 80%;" class="container">
-      
+      <h1 style="text-align: center; margin-bottom: 150px;"><span style="background-color: #5CE1E6;">Projects</span></h1>
       <div style="text-align: end;" class="text-content">
         
-        <h1><span style="background-color: #5CE1E6;">Projects</span></h1>
-        <h3>Where we code...</h3>
+        <h1><span style="background-color: #5CE1E6;">Zestii</span></h1>
+        <h3>This app is build using <br> React and other frameworks. <br> Play with different colors, <br> or go to the code <br> and coloborate with me.</h3>
         <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo mi vel congue egestas. Nullam ullamcorper, nunc id pharetra scelerisque, justo risus commodo nulla, ac feugiat dui ipsum a diam.</p> -->
-        <a target="_blank" href="https://github.com/iam-krist" class="btn">Visit Github</a>
-        <iframe style="
-            position: absolute; top: 0; left: 0; margin-top: -35px; margin-left: -50px;" 
-          width="600px" src="https://react-colorizer-krist.vercel.app/" alt="Image">
-        </iframe>
+        <a target="_blank" href="https://github.com/iam-krist/react-colorizer" class="btn">View Code...</a>
+        <a target="_blank" href="https://react-colorizer-krist.vercel.app/" class="btn">Expand App</a>
+        <div class="iframe-container">
+          <iframe class="projectIframe" height="800px" width="130%" src="https://react-colorizer-krist.vercel.app/" alt="Image">
+          </iframe>
+        </div>        
+      </div>
+    </div>
+    <div style="width: 80%;" class="container">
+      <div style="text-align: end;" class="text-content">
+        
+        <h1><span style="background-color: #5CE1E6;">Calculator</span></h1>
+        <h3>Just a app for basic <br> Mathamatics. <br> Build using React.js <br> & JavaScript, HTML5 & Tailwind CSS. <br>Check out and adjust the code.</h3>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo mi vel congue egestas. Nullam ullamcorper, nunc id pharetra scelerisque, justo risus commodo nulla, ac feugiat dui ipsum a diam.</p> -->
+        <a target="_blank" href="https://github.com/iam-krist/simple-calculator-krist" class="btn">View Code...</a>
+        <a target="_blank" href="https://simple-calculator-krist.vercel.app/" class="btn">Expand App</a>
+        <div class="iframe-container">
+          <iframe class="projectIframe" height="800px" width="100%" src="https://simple-calculator-krist.vercel.app/" alt="Image">
+          </iframe>
+        </div>        
+      </div>
+    </div>
+    <div style="width: 80%;" class="container">
+      <div style="text-align: end;" class="text-content">
+        
+        <h1><span style="background-color: #5CE1E6;">To-Do App</span></h1>
+        <h3>Just a app for basic <br> To-Do List. <br> Build using React.js & <br> JavaScript, HTML5 & Tailwind CSS. <br>Check out and adjust the code.</h3>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo mi vel congue egestas. Nullam ullamcorper, nunc id pharetra scelerisque, justo risus commodo nulla, ac feugiat dui ipsum a diam.</p> -->
+        <a target="_blank" href="https://github.com/iam-krist/simple-calculator-krist" class="btn">View Code...</a>
+        <a target="_blank" href="https://krist-react-todo.netlify.app/" class="btn">Expand App</a>
+        <div class="iframe-container">
+          <iframe class="projectIframe" height="800px" width="100%" src="https://krist-react-todo.netlify.app/" alt="Image">
+          </iframe>
+        </div>        
       </div>
     </div>
     <!-- <div class="page">

@@ -7,8 +7,31 @@
     <title>Graphics Designer and UX Developer</title>
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 120%;
+        height: 120%;
+        z-index: -998;
+      }
+      .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -999;
+        opacity: 0.2; 
+        filter: brightness(6);
+        background-size: cover;
+      }
+    </style>
   </head>
   <body>
+    <div class="backdrop" style="background-image: url(backdrop.jpg); "></div>
+    <canvas id="particle-canvas"></canvas>
     <header>
       <div class="profile_pic">
         <img src="profile.jpeg" alt="" />
@@ -16,43 +39,53 @@
       <div class="description">
         <h1>Christiaan Fourie</h1>
         <h4>Visual Artist & Designer</h4>
-        <p>
+        <!-- <p>
           Hi! I'm Christiaan, I am a 23 year old guy that loves the world of
           Technology & User Experience.
         </p>
         <p>
           You'll always find me out and about looking for inspiration and trying
           to find the beauty in things.
-        </p>
+        </p> -->
       </div>
     </header>
-    <div class="page">
-      <div class="left_sidebar">
-        <h4>Contact Info</h4>
-        <h6><i class="fas fa-call"></i> 071 873 7005</h6>
-        <h6>christiaanfourie60@gmail.com</h6>
-        <h6>iam-krist.github.io</h6>
-        <h4>Skills</h4>
-        <div class="skills_area">
-          <div class="skills_area_left">
-            <label for="file"><h5>Graphics</h5></label>
-            <progress id="file" value="80" max="100">80%</progress>
-            <label for="file"><h5>Front End</h5></label>
-            <progress id="file" value="70" max="100">70%</progress>
-            <label for="file"><h5>Back End</h5></label>
-            <progress id="file" value="35" max="100">35%</progress>
-          </div>
-          <div class="skills_area_right">
-            <label for="file"><h5>IT Systems</h5></label>
-            <progress id="file" value="67" max="100">67%</progress>
-            <label for="file"><h5>Empathy</h5></label>
-            <progress id="file" value="87" max="100">87%</progress>
-            <label for="file"><h5>Planning</h5></label>
-            <progress id="file" value="50" max="100">50%</progress>
-          </div>
+    
+    <div class="description">
+      <div style="display: inline-flex">
+        <div>
+          <h1><span style="background-color: #5CE1E6;">Youtube Channel</span></h1>      
+          <h4><a target="_blank" style="color: #5CE1E6" href="http://bit.ly/3JHWQyo">http://bit.ly/3JHWQyo</a></h4>
         </div>
+        <div><img style='margin-left: 225px' width="135px" src="youtubeQR.png" alt="" /></div>
+      </div>
+      
+      
+      <!-- <p>
+        Hi! I'm Christiaan, I am a 23 year old guy that loves the world of
+        Technology & User Experience.
+      </p>
+      <p>
+        You'll always find me out and about looking for inspiration and trying
+        to find the beauty in things.
+      </p> -->
+    </div>
+    <div style="gap: 20px; display: flex; justify-content: center; align-items: center;">
+      <iframe width="336" height="190" src="https://www.youtube.com/embed/hvaMl3qivGE?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="336" height="190" src="https://www.youtube.com/embed/4ocCR0rzUQY?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="336" height="190" src="https://www.youtube.com/embed/sHZvoQ9AtXk?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div style="margin-top: 20px; gap: 20px; display: flex; justify-content: center; align-items: center;">
+      <iframe width="336" height="190" src="https://www.youtube.com/embed/zDTgDNNflgQ?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="336" height="190" src="https://www.youtube.com/embed/Zac5HrpR6iw?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="336" height="190" src="https://www.youtube.com/embed/zZnCTmzAzdQ?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <!-- <div class="page">
+      <div class="left_sidebar"> -->
+        <!-- <h4>Contact Info</h4>
+        <h6>christiaanfourie60@gmail.com</h6> -->
+        
 
-        <h4>Education & Certification</h4>
+        <!-- <h4>Education & Certification</h4>
         <h5>Foundations of User Experience Design</h5>
         <h6>Google (Coursera) | March 2022</h6>
         <h5>Psychedelic Animation | Photoshop & AE</h5>
@@ -65,8 +98,8 @@
         <h6>Udemy | Jan 2018</h6>
         <h5>High School</h5>
         <h6>HTS Drostdy | 2013 - 2016</h6>
-      </div>
-      <div class="right_sidebar">
+      </div> -->
+      <!-- <div class="right_sidebar">
         <h4>Work Experience</h4>
         <ul>
           <li>
@@ -117,9 +150,9 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
     
-    <div class="second_header">
+    <!-- <div class="second_header">
         <h1>More About..</h1>
         <div class="profile_pic">
             <img src="profile.jpeg" alt="" />
@@ -159,8 +192,80 @@
       <a href="downloads/MyResume.pdf" download>
         <button class="download_btn">Download Resume</button>
       </a>
-    </div>
+    </div> -->
     
     <script src="https://use.fontawesome.com/615f9281e5.js"></script>
+    <script>
+      // Set up canvas
+      const canvas = document.getElementById("particle-canvas");
+      const ctx = canvas.getContext("2d");
+      const particles = [];
+      const particleCount = 200;
+      const maxRadius = 100;
+      
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      // Create particle objects
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          dx: (Math.random() - 0.3) * 4,
+          dy: (Math.random() - 0.3) * 1
+        });
+      }
+
+      // Draw particles and connecting lines
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        for (let i = 0; i < particleCount; i++) {
+          const p1 = particles[i];
+          p1.x += p1.dx;
+          p1.y += p1.dy;
+
+          // Bounce particles off canvas edges
+          if (p1.x > canvas.width || p1.x < -100) {
+            p1.dx = -p1.dx;
+          }
+          if (p1.y > canvas.height || p1.y < -100) {
+            p1.dy = -p1.dy;
+          }
+
+          
+          // Draw particle
+          ctx.beginPath();
+          ctx.arc(p1.x, p1.y, 1, 0, Math.PI * 2);
+
+          // Set fill color to transparent
+          ctx.fillStyle = 'rgba(94, 225, 230, 0.5)';          
+          ctx.fill();
+
+          // Check distance between particles
+          for (let j = i + 1; j < particleCount; j++) {
+            const p2 = particles[j];
+            const xDist = p1.x - p2.x;
+            const yDist = p1.y - p2.y;
+            const distance = Math.sqrt(xDist * xDist + yDist * yDist);
+
+            if (distance < maxRadius) {
+              const opacity = (maxRadius - distance) / maxRadius;
+
+              // Draw connecting line
+              ctx.beginPath();
+              ctx.moveTo(p1.x, p1.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = `hsla(184, 100%, 53%, ${opacity})`;
+              ctx.stroke();
+            }
+          }
+        }
+
+      requestAnimationFrame(draw);
+      }
+
+      draw();
+    </script>
   </body>
 </html>

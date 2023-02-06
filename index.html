@@ -27,6 +27,81 @@
         filter: brightness(6);
         background-size: cover;
       }
+      .container {
+        position: relative;
+        width: 100%;
+        margin: 4em auto;
+        margin-top: 135px;
+      }
+
+      .github-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: -35px;
+        margin-top: -35px;
+        z-index: 11;
+        height: 300px;
+        border-radius: 15px;
+        transition: all 0.5s;
+        box-shadow: 5px 5px 20px 0px #000000;
+        opacity: 0.9;
+      }
+      .github-image:hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: -15px;
+        margin-top: -15px;
+        z-index: 11;
+        height: 305px;
+        border-radius: 15px;
+      }
+
+      .text-content {
+        padding: 2em;
+        background-color: #fff;
+        position: relative;
+        z-index: 1;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.5em 1em;
+        background-color: #5CE1E6;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-top: 1em;
+      } 
+      .typing {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 2em;
+      }
+
+      .animated-text {
+        animation: type 4s steps(30, end), blink-caret .75s step-end infinite alternate;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      @keyframes type {
+        from {
+          width: 0;
+        }
+      }
+
+      @keyframes blink-caret {
+        from, to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: white;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -78,6 +153,16 @@
       <iframe width="336" height="190" src="https://www.youtube.com/embed/zDTgDNNflgQ?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <iframe width="336" height="190" src="https://www.youtube.com/embed/Zac5HrpR6iw?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <iframe width="336" height="190" src="https://www.youtube.com/embed/zZnCTmzAzdQ?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="container">
+      
+      <div style="text-align: end;" class="text-content">
+        <img class="github-image" src="githubProfileSnap.jpg" alt="Image">
+        <h1><span style="background-color: #5CE1E6;">Github</span></h1>
+        <h3>Where we code...</h3>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo mi vel congue egestas. Nullam ullamcorper, nunc id pharetra scelerisque, justo risus commodo nulla, ac feugiat dui ipsum a diam.</p> -->
+        <a target="_blank" href="https://github.com/iam-krist" class="btn">Visit Github</a>
+      </div>
     </div>
     <!-- <div class="page">
       <div class="left_sidebar"> -->
@@ -267,5 +352,6 @@
 
       draw();
     </script>
+    
   </body>
 </html>

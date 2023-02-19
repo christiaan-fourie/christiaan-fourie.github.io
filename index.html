@@ -6,21 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visual Artist & Designer</title>
     <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
   </head>
   <body>
-    <div class="backdrop" style="background-image: url(backdrop.jpg); "></div>
-    <canvas id="particle-canvas"></canvas>
+    <!-- Backdrop -->
+    <div class="backdrop"></div>
+    <!-- // Make Backdrop react on mouse -->
+    <script>      
+      const waveBg = document.querySelector('.backdrop');
+      document.addEventListener('mousemove', (event) => {
+        const x = (event.clientX) / window.innerWidth;
+        const y = (event.clientY) / window.innerHeight;
+        waveBg.style.transform = `translate(-${x * 10}px, -${y * 10}px)`;
+      });
+
+    </script>
+    <!-- Particle Canvas -->
+    <canvas id="particle-canvas"></canvas>    
     <header>
+      <!-- Profile Picture -->
       <div class="profile_pic">
         <img src="profile.jpeg" alt="" />
       </div>
+      <!-- Title Aand decription -->
       <div class="description">
         <h1>Christiaan Fourie</h1>
         <h4>Visual Artist & Designer</h4>              
       </div>
+      <!-- Social Media Icons -->
       <div class="icon-row">
         <a target="_blank" href="https://github.com/iam-krist" class="icon-container">
           <i class="fa fa-github"></i>
@@ -46,20 +62,20 @@
           <h1><span style="background-color: #5CE1E6;">Youtube Channel</span></h1>      
           <h4><a target="_blank" style="color: #5CE1E6" href="http://bit.ly/3JHWQyo">http://bit.ly/3JHWQyo</a></h4>
         </div>
-        <div><img style='margin-left: 225px' width="135px" src="youtubeQR.png" alt="" /></div>
+        <div><img style='margin-left: 225px' width="135px" src="youtubeQR.png" alt=""/></div>
       </div>
     </div>
     <div style="gap: 20px; display: flex; justify-content: center; align-items: center;">
-      <iframe width="336" height="190" src="https://www.youtube.com/embed/hvaMl3qivGE?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe width="336" height="190" src="https://www.youtube.com/embed/4ocCR0rzUQY?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe width="336" height="190" src="https://www.youtube.com/embed/sHZvoQ9AtXk?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="336" height="190" src="https://www.youtube.com/embed/hvaMl3qivGE?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="336" height="190" src="https://www.youtube.com/embed/4ocCR0rzUQY?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="336" height="190" src="https://www.youtube.com/embed/sHZvoQ9AtXk?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <div style="margin-top: 20px; gap: 20px; display: flex; justify-content: center; align-items: center;">
-      <iframe width="336" height="190" src="https://www.youtube.com/embed/zDTgDNNflgQ?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe width="336" height="190" src="https://www.youtube.com/embed/Zac5HrpR6iw?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe width="336" height="190" src="https://www.youtube.com/embed/zZnCTmzAzdQ?autoplay=1&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="336" height="190" src="https://www.youtube.com/embed/zDTgDNNflgQ?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="336" height="190" src="https://www.youtube.com/embed/Zac5HrpR6iw?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="336" height="190" src="https://www.youtube.com/embed/zZnCTmzAzdQ?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    <div class="container">
+    <div class="container github-banner">
       
       <div style="text-align: end;" class="text-content">
         <image class="github-image" src="snap.jpg"></image>
@@ -212,78 +228,9 @@
     </div> 
     
     <script src="https://use.fontawesome.com/615f9281e5.js"></script>
-    <script>
-      // Set up canvas
-      const canvas = document.getElementById("particle-canvas");
-      const ctx = canvas.getContext("2d");
-      const particles = [];
-      const particleCount = 200;
-      const maxRadius = 100;
-      
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
 
-      // Create particle objects
-      for (let i = 0; i < particleCount; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          dx: (Math.random() - 0.3) * 4,
-          dy: (Math.random() - 0.3) * 1
-        });
-      }
 
-      // Draw particles and connecting lines
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        for (let i = 0; i < particleCount; i++) {
-          const p1 = particles[i];
-          p1.x += p1.dx;
-          p1.y += p1.dy;
-
-          // Bounce particles off canvas edges
-          if (p1.x > canvas.width || p1.x < -100) {
-            p1.dx = -p1.dx;
-          }
-          if (p1.y > canvas.height || p1.y < -100) {
-            p1.dy = -p1.dy;
-          }
-
-          
-          // Draw particle
-          ctx.beginPath();
-          ctx.arc(p1.x, p1.y, 1, 0, Math.PI * 2);
-
-          // Set fill color to transparent
-          ctx.fillStyle = 'rgba(94, 225, 230, 0.5)';          
-          ctx.fill();
-
-          // Check distance between particles
-          for (let j = i + 1; j < particleCount; j++) {
-            const p2 = particles[j];
-            const xDist = p1.x - p2.x;
-            const yDist = p1.y - p2.y;
-            const distance = Math.sqrt(xDist * xDist + yDist * yDist);
-
-            if (distance < maxRadius) {
-              const opacity = (maxRadius - distance) / maxRadius;
-
-              // Draw connecting line
-              ctx.beginPath();
-              ctx.moveTo(p1.x, p1.y);
-              ctx.lineTo(p2.x, p2.y);
-              ctx.strokeStyle = `hsla(184, 100%, 53%, ${opacity})`;
-              ctx.stroke();
-            }
-          }
-        }
-
-      requestAnimationFrame(draw);
-      }
-
-      draw();
-    </script>
+    <script src="./particles/particles.js"></script>
     
   </body>
 </html>

@@ -1,236 +1,1351 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <title>Visual Artist & Designer</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png" />
-    <link rel="stylesheet" href="general.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="My Portfolio Webpage" />
+    <meta name="keywords" content="designer, web designer, resume, jquery, css3, bootstrap, Material, portfolio" />
+    <meta name="author" content="krist" />
+    <link rel="shortcut icon" href="favicon.png">
 
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/animations.css" type="text/css">
+    <link rel="stylesheet" href="particles/particles.css" type="text/css">
   </head>
+
   <body>
-    <!-- Backdrop -->
-    <div class="backdrop"></div>
-    <!-- // Make Backdrop react on mouse -->
-    <script>      
-      const waveBg = document.querySelector('.backdrop');
-      document.addEventListener('mousemove', (event) => {
-        const x = (event.clientX) / window.innerWidth;
-        const y = (event.clientY) / window.innerHeight;
-        waveBg.style.transform = `translate(-${x * 10}px, -${y * 10}px)`;
-      });
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="dot dot-1"></div>
+        <div class="dot dot-2"></div>
+        <div class="dot dot-3"></div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" values="0 1 1 0 0 1 0 1 0 0 1 1 0 0 0 0 0 0 21 -7"/>
+          </filter>
+        </defs>
+      </svg>
+    </div>
 
-    </script>
+    <!-- /Loading animation -->
+    <!-- Animated Background -->
+    <div class="lm-animated-bg" style="background-image: url(img/backdrop.jpg);"></div>
+    <!-- /Animated Background -->
     <!-- Particle Canvas -->
-    <canvas id="particle-canvas"></canvas>    
-    <header>
-      <!-- Profile Picture -->
-      <div class="profile_pic">
-        <img src="profile.jpeg" alt="" />
-      </div>
-      <!-- Title Aand decription -->
-      <div class="description">
-        <h1>Christiaan Fourie</h1>
-        <h4>Visual Artist & Designer</h4>              
-      </div>
-      <!-- Social Media Icons -->
-      <div class="icon-row">
-        <a target="_blank" href="https://github.com/iam-krist" class="icon-container">
-          <i class="fa fa-github"></i>
-        </a>
-        <a target="_blank" href="https://www.instagram.com/_i_am_krist_/?hl=en" class="icon-container">
-          <i class="fa fa-instagram"></i>
-        </a>
-        <a target="_blank" href="https://wa.me/+27718737005" class="icon-container">
-          <i class="fa fa-whatsapp"></i>
-        </a>
-        <a target="_blank" href="https://www.linkedin.com/in/iamkrist" class="icon-container">
-          <i class="fa fa-linkedin"></i>
-        </a>
-        <a target="_blank" href="https://codepen.io/iam-krist" class="icon-container">
-          <i class="fa fa-codepen"></i>
-        </a>
-      </div> 
-    </header>
-    
-    <div class="description">
-      <div style="display: inline-flex">
-        <div>
-          <h1><span style="background-color: #5CE1E6;">Youtube Channel</span></h1>      
-          <h4><a target="_blank" style="color: #5CE1E6" href="http://bit.ly/3JHWQyo">http://bit.ly/3JHWQyo</a></h4>
-        </div>
-        <div><img style='margin-left: 225px' width="135px" src="youtubeQR.png" alt=""/></div>
-      </div>
-    </div>
-    <div style="gap: 20px; display: flex; justify-content: center; align-items: center;">
-      <iframe width="336" height="190" src="https://www.youtube.com/embed/hvaMl3qivGE?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe width="336" height="190" src="https://www.youtube.com/embed/4ocCR0rzUQY?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe width="336" height="190" src="https://www.youtube.com/embed/sHZvoQ9AtXk?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    <div style="margin-top: 20px; gap: 20px; display: flex; justify-content: center; align-items: center;">
-      <iframe width="336" height="190" src="https://www.youtube.com/embed/zDTgDNNflgQ?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe width="336" height="190" src="https://www.youtube.com/embed/Zac5HrpR6iw?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe width="336" height="190" src="https://www.youtube.com/embed/zZnCTmzAzdQ?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    <div class="container github-banner">
-      
-      <div style="text-align: end;" class="text-content">
-        <image class="github-image" src="snap.jpg"></image>
-        <h1><span style="background-color: #5CE1E6;">Github</span></h1>
-        <h3>Where we code...</h3>
-        <a target="_blank" href="https://github.com/iam-krist" class="btn">Visit Github</a>
-      </div>
-    </div>
-    <div style="width: 80%;" class="container">
-      <h1 style="text-align: center; margin-bottom: 150px;"><span style="background-color: #5CE1E6;">Projects</span></h1>
-      <div style="text-align: end;" class="text-content">
-        
-        <h1><span style="background-color: #5CE1E6;">Zestii</span></h1>
-        <h3>This app is build using <br> React and other frameworks. <br> Play with different colors, <br> or go to the code <br> and coloborate with me.</h3>
-        <a target="_blank" href="https://github.com/iam-krist/react-colorizer" class="btn">View Code...</a>
-        <a target="_blank" href="https://react-colorizer-krist.vercel.app/" class="btn">Expand App</a>
-        <div class="iframe-container">
-          <iframe class="projectIframe" height="800px" width="130%" src="https://react-colorizer-krist.vercel.app/" alt="Image">
-          </iframe>
-        </div>        
-      </div>
-    </div>
-    <div style="width: 80%;" class="container">
-      <div style="text-align: end;" class="text-content">
-        
-        <h1><span style="background-color: #5CE1E6;">Calculator</span></h1>
-        <h3>Just a app for basic <br> Mathamatics. <br> Build using React.js <br> & JavaScript, HTML5 & Tailwind CSS. <br>Check out and adjust the code.</h3>
-        <a target="_blank" href="https://github.com/iam-krist/simple-calculator-krist" class="btn">View Code...</a>
-        <a target="_blank" href="https://simple-calculator-krist.vercel.app/" class="btn">Expand App</a>
-        <div class="iframe-container">
-          <iframe class="projectIframe" height="800px" width="100%" src="https://simple-calculator-krist.vercel.app/" alt="Image">
-          </iframe>
-        </div>        
-      </div>
-    </div>
-    <div style="width: 80%;" class="container">
-      <div style="text-align: end;" class="text-content">
-        
-        <h1><span style="background-color: #5CE1E6;">To-Do App</span></h1>
-        <h3>Just a app for basic <br> To-Do List. <br> Build using React.js & <br> JavaScript, HTML5 & Tailwind CSS. <br>Check out and adjust the code.</h3>
-        <a target="_blank" href="https://github.com/iam-krist/simple-calculator-krist" class="btn">View Code...</a>
-        <a target="_blank" href="https://krist-react-todo.netlify.app/" class="btn">Expand App</a>
-        <div class="iframe-container">
-          <iframe class="projectIframe" height="800px" width="100%" src="https://krist-react-todo.netlify.app/" alt="Image">
-          </iframe>
-        </div>        
-      </div>
+    <div class="particle-container">
+      <canvas id="particle-canvas"></canvas>
     </div>
 
-        <!-- <h4>Education & Certification</h4>
-        <h5>Foundations of User Experience Design</h5>
-        <h6>Google (Coursera) | March 2022</h6>
-        <h5>Psychedelic Animation | Photoshop & AE</h5>
-        <h6>Domestika | Jul 2021</h6>
-        <h5>JavaScript Essentials</h5>
-        <h6>Udemy | Sep 2020</h6>
-        <h5>Web Development | HTML & CSS</h5>
-        <h6>Udemy | Jan 2018</h6>
-        <h5>WordPress Training</h5>
-        <h6>Udemy | Jan 2018</h6>
-        <h5>High School</h5>
-        <h6>HTS Drostdy | 2013 - 2016</h6>
-      </div> -->
-      <!-- <div class="right_sidebar">
-        <h4>Work Experience</h4>
-        <ul>
-          <li>
-            <h5>Production Specialist | iClick Business Center</h5>
-            <h6>APR 2019 - Current | 3+ Years</h6>
-            <ul>
-              <li>
-                Serving Clients, answering calls, Prioritize Jobs and tracking
-                Stock.
-              </li>
-              <li>Basic Designs, Print Layouts & Design Briefing.</li>
-              <li>Information & Technology Consulting.</li>
-              <li>Print & Production.</li>
-            </ul>
-          </li>
-          <li>
-            <h5>IT Guy | CF Motor Repairs</h5>
-            <h6>SEP 2017 - APR 2019</h6>
-            <ul>
-              <li>Setting up networks(Printers, Routers, etc.).</li>
-              <li>Fixing all computer and other IT-related problems.</li>
-              <li>
-                Working with diagnostic equipment and doing OBD Diagnostics on
-                vehicles.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h5>Doing Work as Freelancer</h5>
-            <h6>APR 2017 - SEP 2017</h6>
-            <ul>
-              <li>Doing Graphic Designs & Websites</li>
-              <li>Working with cPanel and Servers</li>
-              <li>
-                Setting up local servers for development and testing (Linux
-                Based).
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h5>General Shop Assistant | MR VIDEO</h5>
-            <h6>SEP 2016 - APR 2017</h6>
-            <ul>
-              <li>
-                Helping customer, working on the database and doing stocktaking.
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div> -->
-    
-    <!-- 
-    <div class="1">
-        <div class="left_sidebar second_sidebar_left">
-            <h4>Creative & Dynamic Skills & Interests</h4>
-            <ul>
-                <li>Passionate about art and loves to express creativity through drawings and creations.</li>
-                <li>Constantly inspired and dedicates time to exploring new ideas and designs.</li>
-                <li>Relaxes and escapes through musical expression on the guitar.</li>
-                <li>Inquisitive and fascinated by the science of the universe and how it all fits together.</li>
-                <li>A curious researcher and always seeking to learn about new technologies.</li>
-                <li>Intrigued by the power of the Internet to bring information together.</li>
-                <li>Enjoys tinkering with computer code and exploring its potential.</li>
-                <li>Leads an active lifestyle through free-running, forest adventures, and surfing expeditions.</li>
-            </ul>
-        </div>
-        <div class="right_sidebar second_sidebar_right">
-            <h4>Social Media</h4>
-            <div class="my__social">
-                <a target="_blank" href="https://github.com/iam-krist"><i class="fa fa-github" aria-hidden="true"> </i>Github</a>
-                <a target="_blank" href="https://www.instagram.com/_i_am_krist_/?hl=en"><i class="fa fa-instagram" aria-hidden="true"> </i>Instagram</a>
-                <a target="_blank" href="https://wa.me/+27718737005"><i class="fa fa-whatsapp" aria-hidden="true"> </i>Whatsapp</a>
-                <a target="_blank" href="https://www.linkedin.com/in/iamkrist"><i class="fa fa-linkedin" aria-hidden="true"> </i>LinkedIn</a> 
-                <a target="_blank" href="https://www.behance.net/christifourie"><i class="fa fa-behance" aria-hidden="true"> </i>Behance</a>
-                <a target="_blank" href="https://dribbble.com/iam-krist"><i class="fa fa-dribbble" aria-hidden="true"> </i>Dribbble</a>                
-                <a target="_blank" href="https://codepen.io/iam-krist"><i class="fa fa-codepen" aria-hidden="true"> </i>Codepen</a>              
-                <a target="_blank" href="https://medium.com/@christiaanfourie60"><i class="fa fa-medium" aria-hidden="true"> </i>Medium</a>
-                
+    <div class="half-bg"></div>
+
+    <div class="page">
+      <div class="page-content">
+
+          <header id="site_header" class="header mobile-menu-hide">
+            <div class="header-content">
+              <!-- <div class="header-lng">
+                <ul>
+                  <li>
+                    <a href="#" class="active">En</a>
+                  </li>
+                  <li>
+                    <a href="#">Fr</a>
+                  </li>
+                </ul>
+              </div> -->
+              <div class="header-photo">
+                <img src="img/profile.jpeg" alt="Christiaan Fourie">
+              </div>
+              <div class="header-titles">
+                <h2>Christiaan Fourie</h2>
+                <h4>Visual Artist & Designer</h4>
+              </div>
             </div>
-        </div>
 
-    </div>-->
-    <div class="download_area">
-      <a target="_blank" href="downloads/MyResume.pdf" download class="btn">Download Resume</a>
-    </div> 
-    
-    <script src="https://use.fontawesome.com/615f9281e5.js"></script>
+            <ul class="main-menu">
+              <li>
+                <a href="#about-me" class="nav-anim">
+                  <span class="menu-icon lnr lnr-user"></span>
+                  <span class="link-text">About Me</span>
+                </a>
+              </li>
+              <li>
+                <a href="#resume" class="nav-anim">
+                  <span class="menu-icon lnr lnr-graduation-hat"></span>
+                  <span class="link-text">Resume</span>
+                </a>
+              </li>
+              <li>
+                <a href="#portfolio" class="nav-anim">
+                  <span class="menu-icon lnr lnr-briefcase"></span>
+                  <span class="link-text">Portfolio</span>
+                </a>
+              </li>
+              <li>
+                <a href="#blog" class="nav-anim">
+                  <span class="menu-icon lnr lnr-book"></span>
+                  <span class="link-text">Blog</span>
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="nav-anim">
+                  <span class="menu-icon lnr lnr-envelope"></span>
+                  <span class="link-text">Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="social-links">
+              <ul>
+                <li><a href="https://github.com/iam-krist" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/_i_am_krist_/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://wa.me/+27718737005" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/iamkrist" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://codepen.io/iam-krist" target="_blank"><i class="fab fa-codepen"></i></a></li>
+              </ul>
+            </div>
+
+            <div class="info-list">
+              <ul>
+                <li>
+                  <span class="value">071 873 7005</span>
+                </li>
+
+                <li>
+                  <span class="value"><a href="#" class="__cf_email__" >christiaanfourie60@gmail.com</a></span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="header-buttons">
+              <a href="downloads/MyResume.pdf" target="_blank" class="btn btn-primary">Download CV</a>
+            </div>
+
+            <div class="copyrights">© 2023 All Elements Free To Use.</div>
+          </header>
+
+          <!-- Mobile Navigation -->
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- End Mobile Navigation -->
+
+          <!-- Arrows Nav -->
+          <div class="lmpixels-arrows-nav">
+            <div class="lmpixels-arrow-right"><i class="lnr lnr-chevron-right"></i></div>
+            <div class="lmpixels-arrow-left"><i class="lnr lnr-chevron-left"></i></div>
+          </div>
+          <!-- End Arrows Nav -->
+
+          <div class="content-area">
+            <div class="animated-sections">
+
+              <!-- About Me Subpage -->
+              <section data-id="about-me" class="animated-section">
+                <div class="section-content">
+
+                  <div class="row flex-v-align">
+                      <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="home-text hp-left">
+
+                          <div class="owl-carousel text-rotation">                                    
+                            <div class="item">
+                              <h4>Visual Artist</h4>
+                            </div>
+                            <div class="item">
+                              <h4>Graphic Designer</h4>
+                            </div>
+                            <div class="item">
+                              <h4>UI & UX Designer</h4>
+                            </div>
+                          </div>
+
+                          <h1>Christiaan Fourie</h1>
+                          <p>
+                            Welcome to my portfolio! I am a creative Front-End Developer and Visual Artist with a passion for designing and building interactive, user-friendly websites. With experience in a variety of software and front-end frameworks, I bring a strong eye for design to every project, ensuring that my websites are both visually appealing and fully functional.
+                          </p>
+                          
+                          <div class="home-buttons">
+                            <a href="downloads/MyResume.pdf" target="_blank" class="btn btn-primary">Download CV</a>
+                            <a href="#contact" target="_self" class="btn btn-secondary">Contact</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6 col-lg-6">
+                          <div class="home-photo">
+                              <div class="hp-inner" style="background-image: url(img/profile.jpeg); transform: scaleX(-1);" ></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="white-space-70"></div>
+
+                  <!-- Fun Facts -->
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                      <div class="fun-fact gray-default">
+                        <i class="lnr lnr-heart"></i>
+                        <h4>Happy Clients</h4>
+                        <span class="fun-fact-block-value">99</span>
+                        <span class="fun-fact-block-text"></span>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4">
+                      <div class="fun-fact gray-default">
+                        <i class="lnr lnr-clock"></i>
+                        <h4>Working Hours</h4>
+                        <span class="fun-fact-block-value">4,380</span>
+                        <span class="fun-fact-block-text"></span>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 ">
+                      <div class="fun-fact gray-default">
+                        <i class="lnr lnr-star"></i>
+                        <h4>Cups of Coffee</h4>
+                        <span class="fun-fact-block-value">1 460</span>
+                        <span class="fun-fact-block-text"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End of Fun Facts -->
 
 
-    <script src="./particles/particles.js"></script>
-    
-  </body>
+
+                  <div class="white-space-70"></div>
+
+                  <!-- Services -->
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="block-title">
+                        <h3>What I Do</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="col-inner">
+                        <div class="info-list-w-icon">
+                          <div class="info-block-w-icon">
+                            <div class="ci-icon">
+                              <i class="lnr lnr-laptop-phone"></i>
+                            </div>
+                            <div class="ci-text">
+                              <h4>Graphic Design</h4>
+                              <p>Create a variety of visual assets, such as logos, business cards, brochures, flyers, social media graphics, and other marketing materials.</p>
+                            </div>
+                          </div>
+                          <div class="info-block-w-icon">
+                            <div class="ci-icon">
+                              <i class="lnr lnr-code"></i>
+                            </div><div class="ci-text">
+                              <h4>Web Design & Development</h4>
+                              <p>Create a custom website from scratch, or a redesign of existing website to improve its functionality, user experience, and aesthetics.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="col-inner">
+                        <div class="info-list-w-icon">
+                          <div class="info-block-w-icon">
+                            <div class="ci-icon">
+                              <i class="lnr lnr-film-play"></i>
+                            </div>
+                            <div class="ci-text">
+                              <h4>Video Editing</h4>
+                              <p>Manipulating and rearranging video footage to create a video. It involves selecting and trimming clips and adding effects and music.</p>
+                            </div>
+                          </div>
+                          <div class="info-block-w-icon">
+                            <div class="ci-icon">
+                              <i class="lnr lnr-cog"></i>
+                            </div><div class="ci-text">
+                              <h4>Website Management</h4>
+                              <p>Ongoing process of maintaining, updating, and optimizing a website to ensure that it remains secure, functional, and up-to-date.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End of Services -->
+
+
+                  
+
+
+                  <!-- Clients -->
+                  <!-- <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="block-title">
+                        <h3>Cilents</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="clients owl-carousel">
+                        
+                        <div class="client-block">
+                          <a href="#" target="_blank" title="Logo">
+                            <img src="img/clients/client-1.png" alt="Logo">
+                          </a>
+                        </div>
+
+                        <div class="client-block">
+                          <a href="#" target="_blank" title="Logo">
+                            <img src="img/clients/client-2.png" alt="Logo">
+                          </a>
+                        </div>
+
+                        <div class="client-block">
+                          <a href="#" target="_blank" title="Logo">
+                            <img src="img/clients/client-3.png" alt="Logo">
+                          </a>
+                        </div>
+
+                        <div class="client-block">
+                          <a href="#" target="_blank" title="Logo">
+                            <img src="img/clients/client-4.png" alt="Logo">
+                          </a>
+                        </div>
+
+                        <div class="client-block">
+                          <a href="#" target="_blank" title="Logo">
+                            <img src="img/clients/client-5.png" alt="Logo">
+                          </a>
+                        </div>
+
+                        <div class="client-block">
+                          <a href="#" target="_blank" title="Logo">
+                            <img src="img/clients/client-6.png" alt="Logo">
+                          </a>
+                        </div>
+
+                        <div class="client-block">
+                          <a href="#" target="_blank" title="Logo">
+                            <img src="img/clients/client-7.png" alt="Logo">
+                          </a>
+                        </div>
+  
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- End of Clients -->
+
+                  <div class="white-space-70"></div>
+
+                  <!-- Pricing -->
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+
+                      <div class="block-title">
+                        <h3>Pricing</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class=" col-xs-12 col-sm-12 ">
+                      <div class="fw-pricing clearfix row">
+                        
+                        <div class="fw-package-wrap col-md-4 ">
+                          <div class="fw-package">
+                            <div class="fw-heading-row">
+                              <span>Starter</span>
+                            </div>
+                            
+                            <div class="fw-pricing-row">
+                              <span>R 250</span>
+                              <small>per month</small>
+                            </div>
+                            
+                            <div class="fw-button-row">
+                              <a href="#" target="_self" class="btn btn-secondary">Subscribe</a>
+                            </div>
+
+                            <div class="fw-default-row">Domain</div>
+                            <div class="fw-default-row">1 GB | Hosting</div>
+                            <div class="fw-default-row">2 Hours of Design</div>
+                            <div class="fw-default-row">9-5 Support Everyday</div>
+                          </div>
+                        </div>
+     
+                        <div class="fw-package-wrap col-md-4 highlight-col">
+                          <div class="fw-package">
+                            <div class="fw-heading-row">
+                              <span>Gold Value</span>
+                            </div>
+                            
+                            <div class="fw-pricing-row">
+                              <span>R 500</span>
+                              <small>per month</small>
+                            </div>
+
+                            <div class="fw-button-row">
+                              <a href="#" target="_self" class="btn btn-secondary">Subscribe</a>
+                            </div>
+                            
+                            <div class="fw-default-row">Domain</div>
+                            <div class="fw-default-row">5 GB | Hosting</div>
+                            <div class="fw-default-row">5 Hours of Design</div>
+                            <div class="fw-default-row">9-5 Support Everyday</div>
+                            <div class="fw-default-row"></div>
+                          </div>
+                        </div>
+
+                        <div class="fw-package-wrap col-md-4">
+                          <div class="fw-package">
+                            <div class="fw-heading-row">
+                              <span>Premium</span>
+                            </div>
+                            
+                            <div class="fw-pricing-row">
+                              <span>R 2 500</span>
+                              <small>per month</small>
+                            </div>
+
+                            <div class="fw-button-row">
+                              <a href="#" target="_self" class="btn btn-secondary">Subscribe</a>
+                            </div>
+                            
+                            <div class="fw-default-row">Domain</div>
+                            <div class="fw-default-row">Unlimited | Hosting</div>
+                            <div class="fw-default-row">28 Hours of Design</div>
+                            <div class="fw-default-row">24/7 Support Everyday</div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End of Pricing -->
+
+                  
+                  <div class="white-space-70"></div>
+
+                  <!-- Testimonials -->
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="block-title">
+                        <h3>Testimonials</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="testimonials owl-carousel">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial">
+                          <!-- <div class="img">
+                            <img src="img/testimonials/testimonial-1.jpg" alt="Alex Smith">
+                          </div> -->
+                          <div class="text">
+                            <p>Working with Chris has been an absolute pleasure! His attention to detail, creativity, and technical expertise have truly exceeded our expectations.</p>
+                          </div>
+
+                          <div class="author-info">
+                            <h4 class="author">Julia</h4>
+                            <h5 class="company">PixaLeaf</h5>
+                            <div class="icon">
+                              <i class="fas fa-quote-right"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End of Testimonial 1 -->
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial">
+                          <!-- <div class="img">
+                            <img src="img/testimonials/testimonial-2.jpg" alt="Alex Smith">
+                          </div> -->
+                          <div class="text">
+                            <p>He took the time to understand our business needs and delivered a custom website that not only looks amazing but also functions seamlessly.</p>
+                          </div>
+
+                          <div class="author-info">
+                            <h4 class="author">Robert</h4>
+                            <h5 class="company">Builderia</h5>
+                              <div class="icon">
+                                <i class="fas fa-quote-right"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End of Testimonial 2 -->
+
+                          <!-- Testimonial 3 -->
+                          <div class="testimonial">
+                            <!-- <div class="img">
+                              <img src="img/testimonials/testimonial-3.jpg" alt="Alex Smith">
+                            </div> -->
+                            <div class="text">
+                              <p>His website has already helped me attract more visitors and generate more leads. I recommend him to any small business!</p>
+                            </div>
+
+                            <div class="author-info">
+                              <h4 class="author">Kristin</h4>
+                              <h5 class="company">Ziandera</h5>
+                              <div class="icon">
+                                <i class="fas fa-quote-right"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End of Testimonial 3 -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End of Testimonials -->
+
+                </div>
+              </section>
+              <!-- End of About Me Subpage -->
+
+              <!-- Resume Subpage -->
+              <section data-id="resume" class="animated-section">
+                <div class="section-content">
+                  <div class="page-title">
+                    <h2>Resume</h2>
+                    <h4>4 Years of Experience</h4>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-7">
+
+                      <div class="block-title">
+                        <h3>Education & Certification</h3>
+                      </div>
+                      
+                      <div class="timeline timeline-second-style clearfix">
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">March 2022</h5>
+                            <span class="item-company">Google <br> ( Coursera )</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Foundation Of User Experience Design</h4>
+                            <p>Foundation of User Experience (UX) Design course covers the principles, techniques, and best practices used in the field of UX design.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">July 2021</h5>
+                            <span class="item-company">Domestika</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Psychedelic Animation | Photoshop & AE</h4>
+                            <p>The Psychedelic Animation course focuses on Photoshop and After Effects and cover techniques for creating animated and visually dynamic content using these tools.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">Sep 2020</h5>
+                            <span class="item-company">Udemy</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">JavaScript Essentials</h4>
+                            <p>The JavaScript Essentials course covers the fundamental concepts and techniques of the JavaScript programming language.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">Jan 2018</h5>
+                            <span class="item-company">Udemy</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Web Development | HTML & CSS</h4>
+                            <p>This cover the basics of website creation and design with HTML and CSS code.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">Jan 2018</h5>
+                            <span class="item-company">Udemy</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Wordpress Training</h4>
+                            <p>how to use WordPress, which is a popular content management system (CMS) used for building and maintaining websites.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">2016</h5>
+                            <span class="item-company">HTS Drostdy</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">High School</h4>
+                            <p>In my High School Career I had subjects like, Maths, Physical Sciences, Computer Applications & IT</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="white-space-50"></div>
+
+                      <div class="block-title">
+                        <h3>Experience</h3>
+                      </div>
+
+                      <div class="timeline timeline-second-style clearfix">
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">APR 2019 - Current</h5>
+                            <span class="item-company">iClick Business Center</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Production Specialist</h4>
+                            <p>
+                              <ul>
+                                <li>Managed print and production processes to ensure high-quality delivery.</li>
+                                <li>Provide information and technology consulting to clients</li>
+                                <li>Created designs, print layouts, and conducted design briefings.</li>
+                                <li>Prioritized and tracked jobs to ensure timely completion.</li>
+                                <li>Answered client calls and addressed their needs in a professional manner.</li>
+                              </ul>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">APR 2017 - Current</h5>
+                            <span class="item-company">Mayan Design</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Freelancer</h4>
+                            <p>
+                              <ul>
+                                <li>Met with clients to understand their design needs.</li>
+                                <li>Conceptualized and created visual designs.</li>
+                                <li>Managed projects from start to finish.</li>
+                                <li>Kept clients updated on project progress.</li>
+                                <li>Ensured deliverables met clients expectations and quality standards</li>
+                                <li>Contributed to agency growth by pursuing new business opportunities.</li>
+                              </ul>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">SEP 2017 - APR 2019</h5>
+                            <span class="item-company">CF Motor Repairs</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">The IT Guy</h4>
+                            <p>
+                              <ul>
+                                <li>Managed the company website, ensuring that it was up-to-date and functional.</li>
+                                <li>Maintained and managed the company's computer networks.</li>
+                                <li>Fixed computer and other IT-related problems, utilizing diagnostic equipment as necessary.</li>
+                              </ul>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Skills & Certificates -->
+                    <div class="col-xs-12 col-sm-5">
+                      <!-- Design Skills -->
+                      <div class="block-title">
+                        <h3>Design Skills</h3>
+                      </div>
+
+                      <div class="skills-info skills-second-style">
+                        <!-- Skill 1 -->
+                        <div class="skill clearfix">
+                          <h4>Graphic Design</h4>
+                          <div class="skill-value">85%</div>
+                        </div>
+                        <div class="skill-container skill-1">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Skill 1 -->
+                        
+                        <!-- Skill 2 -->
+                        <div class="skill clearfix">
+                          <h4>Print Design</h4>
+                          <div class="skill-value">75%</div>
+                        </div>
+                        <div class="skill-container skill-2">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Skill 2 -->
+                        
+                        <!-- Skill 3 -->
+                        <div class="skill clearfix">
+                          <h4>Logo Design</h4>
+                          <div class="skill-value">70%</div>
+                        </div>
+                        <div class="skill-container skill-3">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Skill 3 -->
+                        
+                        <!-- Skill 4 -->
+                        <div class="skill clearfix">
+                          <h4>Web Design</h4>
+                          <div class="skill-value">90%</div>
+                        </div>
+                        <div class="skill-container skill-4">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Skill 4 -->
+
+                      </div>
+                      <!-- End of Design Skills -->
+
+                      <div class="white-space-10"></div>
+
+                      <!-- Coding Skills -->
+                      <div class="block-title">
+                        <h3>Coding Skills</h3>
+                      </div>
+
+                      <div class="skills-info skills-second-style">
+                        <!-- Skill 5 -->
+                        <div class="skill clearfix">
+                          <h4>JavaScript</h4>
+                          <div class="skill-value">75%</div>
+                        </div>
+                        <div class="skill-container skill-5">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Skill 5 -->
+
+                        <!-- Skill 6 -->
+                        <div class="skill clearfix">
+                          <h4>Node JS</h4>
+                          <div class="skill-value">65%</div>
+                        </div>
+                        <div class="skill-container skill-6">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Skill 6 -->
+                        
+                        <!-- Skill 7 -->
+                        <div class="skill clearfix">
+                          <h4>HTML/CSS</h4>
+                          <div class="skill-value">100%</div>
+                        </div>
+                        <div class="skill-container skill-7">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Skill 7 -->
+                        
+                        <!-- Skill 8 -->
+                        <div class="skill clearfix">
+                          <h4>React JS</h4>
+                          <div class="skill-value">75%</div>
+                        </div>
+                        <div class="skill-container skill-8">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Skill 8 -->
+
+                        <!-- Skill 9 -->
+                        <div class="skill clearfix">
+                          <h4>Vue JS</h4>
+                          <div class="skill-value">70%</div>
+                        </div>
+                        <div class="skill-container skill-9">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Skill 9 -->
+                      </div>
+                      <!-- End of Coding Skills -->
+
+                      <div class="white-space-10"></div>
+
+                      <!-- Knowledges -->
+                      <div class="block-title">
+                        <h3>Knowledges</h3>
+                      </div>
+
+                      <ul class="knowledges">
+                        <li>Print</li>
+                        <li>Digital Design</li>
+                        <li>Visual Art</li>
+                        <li>Time Management</li>
+                        <li>Communication</li>
+                        <li>Problem-Solving</li>
+                        <li>Social Networking</li>
+                        <li>Flexibility</li>
+                      </ul>
+                      <!-- End of Knowledges -->
+                    </div>
+                    <!-- End of Skills & Certificates -->
+                  </div>
+
+                  <div class="white-space-50"></div>
+
+                  <!-- Certificates -->
+                  <!-- <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="block-title">
+                        <h3>Certificates</h3>
+                      </div>
+                    </div>
+                  </div> -->
+                  
+                  <!-- <div class="row"> -->
+                    <!-- Certificate 1 -->
+                    <!-- <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+                          <img src="img/certificates/ux-design.jpeg" alt="logo">
+                        </div>
+                        
+                        <div class="certi-content">
+                          <div class="certi-title">
+                            <h4>Introduction to User Experience Design</h4>
+                          </div>
+                          <div class="certi-id">
+                            <span>Coursera</span>
+                          </div>
+                          <div class="certi-date">
+                            <span>March 2022</span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                    <!-- End of Certificate 1 -->
+
+                    <!-- Certificate 2 -->
+                    <!-- <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+                          <img src="img/certificates/psychedelic.JPG" alt="logo">
+                        </div>
+                        
+                        <div class="certi-content">
+                          <div class="certi-title">
+                            <h4>Psychedelic Animation</h4>
+                          </div>
+                          <div class="certi-id">
+                            <span>Domestika</span>
+                          </div>
+                          <div class="certi-date">
+                            <span>July 2021</span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                    <!-- End of Certificate 2 -->
+
+                  <!-- </div> -->
+                  <!-- End of Certificates -->
+                </div>
+              </section>
+              <!-- End of Resume Subpage -->
+
+              <!-- Portfolio Subpage -->
+              <section data-id="portfolio" class="animated-section">
+                <div class="section-content">
+                  <div class="page-title">
+                    <h2>Portfolio</h2>
+                    <h4>My Best Works</h4>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <!-- Portfolio Content -->
+                      <div class="portfolio-content">
+
+                        <ul class="grid-filters portfolio-filters">
+                          <li class="active">
+                            <a class="filter btn btn-sm btn-link" data-filter=".category_all">All</a>
+                          </li>
+                          <li>
+                            <a class="filter btn btn-sm btn-link" data-filter=".category_youtube-videos">YouTube Videos</a>
+                          </li>
+                          <li>
+                            <a class="filter btn btn-sm btn-link" data-filter=".category_visual-art">Visual Art</a>
+                          </li>                         
+                        </ul>
+
+                        <!-- Portfolio Grid -->
+                        <div class="portfolio-grid two-columns">
+                          <!-- Figure Youtube 1 -->
+                          <figure class="item lbvideo category_all category_youtube-videos">
+                            <div class="portfolio-item-img">
+                              <iframe width="100%" src="https://www.youtube.com/embed/hvaMl3qivGE?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                              <a href="https://www.youtube.com/embed/bg0gv2YpIok" class="lightbox mfp-iframe"></a>
+                            </div>
+
+                            <i class="fas fa-video"></i>
+                            <h4 class="name"><span>YouTube</span>The Genesis</h4>
+                            <span class="category">The Genesis</span>
+                          </figure>
+
+                          <!-- Figure Youtube 2 -->
+                          <figure class="item lbvideo category_all category_youtube-videos">
+                            <div class="portfolio-item-img">
+                              <iframe width="100%" src="https://www.youtube.com/embed/4ocCR0rzUQY?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                              <a href="https://www.youtube.com/embed/bg0gv2YpIok" class="lightbox mfp-iframe"></a>
+                            </div>
+
+                            <i class="fas fa-video"></i>
+                            <h4 class="name"><span>YouTube</span>The Genesis</h4>
+                            <span class="category">Story of The Atom</span>
+                          </figure>
+
+                          <!-- Figure Youtube 3 -->
+                          <figure class="item lbvideo category_all category_youtube-videos">
+                            <div class="portfolio-item-img">
+                              <iframe width="100%" src="https://www.youtube.com/embed/sHZvoQ9AtXk?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                              <a href="https://www.youtube.com/embed/bg0gv2YpIok" class="lightbox mfp-iframe"></a>
+                            </div>
+
+                            <i class="fas fa-video"></i>
+                            <h4 class="name"><span>YouTube</span>The Genesis</h4>
+                            <span class="category">Story of The Atom</span>
+                          </figure>
+
+                          <!-- Figure Youtube 4 -->
+                          <figure class="item lbvideo category_all category_youtube-videos">
+                            <div class="portfolio-item-img">
+                              <iframe width="100%" src="https://www.youtube.com/embed/zDTgDNNflgQ?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                              <a href="https://www.youtube.com/embed/bg0gv2YpIok" class="lightbox mfp-iframe"></a>
+                            </div>
+
+                            <i class="fas fa-video"></i>
+                            <h4 class="name"><span>YouTube</span>The Genesis</h4>
+                            <span class="category">Story of The Atom</span>
+                          </figure>
+
+                          <!-- Figure Youtube 5 -->
+                          <figure class="item lbvideo category_all category_youtube-videos">
+                            <div class="portfolio-item-img">
+                              <iframe width="100%" src="https://www.youtube.com/embed/Zac5HrpR6iw?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                              <a href="https://www.youtube.com/embed/bg0gv2YpIok" class="lightbox mfp-iframe"></a>
+                            </div>
+
+                            <i class="fas fa-video"></i>
+                            <h4 class="name"><span>YouTube</span>The Genesis</h4>
+                            <span class="category">Story of The Atom</span>
+                          </figure>
+
+                          <!-- Figure Youtube 6 -->
+                          <figure class="item lbvideo category_all category_youtube-videos">
+                            <div class="portfolio-item-img">
+                              <iframe width="100%" src="https://www.youtube.com/embed/zZnCTmzAzdQ?autoplay=0&mute=1&controls=0&loop=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                              <a href="https://www.youtube.com/embed/bg0gv2YpIok" class="lightbox mfp-iframe"></a>
+                            </div>
+
+                            <i class="fas fa-video"></i>
+                            <h4 class="name"><span>YouTube</span>The Genesis</h4>
+                            <span class="category">Story of The Atom</span>
+                          </figure>
+
+                          <!-- Figure Visual Art 1 -->
+                          <figure class="item standard category_all category_visual-art">
+                            <div class="portfolio-item-img">
+                              <img   src="img/portfolio/visual-art/Look Into My Eyes.jpg" alt="Media Project 2" title="" />
+                              <a href="portfolio-1.html" class="ajax-page-load"></a>
+                            </div>
+
+                            <i class="far fa-file-alt"></i>
+                            <h4 class="name"><span>Look Into My Eyes</span> Project 2</h4>
+                            <span class="category">Visual Art</span>
+                          </figure>
+
+                          <!-- Figure Visual Art 2 -->
+                          <figure class="item standard category_all category_visual-art">
+                            <div class="portfolio-item-img">
+                              <img  src="img/portfolio/visual-art/Rebirth.jpg" alt="Media Project 2" title="" />
+                              <a href="portfolio-1.html" class="ajax-page-load"></a>
+                            </div>
+
+                            <i class="far fa-file-alt"></i>
+                            <h4 class="name"><span>Rebirth</span> Project 2</h4>
+                            <span class="category">Visual Art</span>
+                          </figure>
+
+                          <!-- Figure Visual Art 3 -->
+                          <figure class="item standard category_all category_visual-art">
+                            <div class="portfolio-item-img">
+                              <img src="img/portfolio/visual-art/No Return.jpg" alt="Media Project 2" title="" />
+                              <a href="portfolio-1.html" class="ajax-page-load"></a>
+                            </div>
+
+                            <i class="far fa-file-alt"></i>
+                            <h4 class="name"><span>Rebirth</span> Project 2</h4>
+                            <span class="category">Visual Art</span>
+                          </figure>
+
+                          <!-- Figure Visual Art 4 -->
+                          <figure class="item standard category_all category_visual-art">
+                            <div class="portfolio-item-img">
+                              <img   src="img/portfolio/visual-art/Jeep Lost In The Desert.png" alt="Media Project 2" title="" />
+                              <a href="portfolio-1.html" class="ajax-page-load"></a>
+                            </div>
+
+                            <i class="far fa-file-alt"></i>
+                            <h4 class="name"><span>Rebirth</span> Project 2</h4>
+                            <span class="category">Visual Art</span>
+                          </figure>
+
+                          <!-- Figure Visual Art 5 -->
+                          <figure class="item standard category_all category_visual-art">
+                            <div class="portfolio-item-img">
+                              <img   src="img/portfolio/visual-art/Lost In The Desert.png" alt="Media Project 2" title="" />
+                              <a href="portfolio-1.html" class="ajax-page-load"></a>
+                            </div>
+
+                            <i class="far fa-file-alt"></i>
+                            <h4 class="name"><span>Rebirth</span> Project 2</h4>
+                            <span class="category">Visual Art</span>
+                          </figure>
+
+                          <!-- Figure Visual Art 6 -->
+                          <figure class="item standard category_all category_visual-art">
+                            <div class="portfolio-item-img">
+                              <img  src="img/portfolio/visual-art/Lost.jpg" alt="Media Project 2" title="" />
+                              <a href="portfolio-1.html" class="ajax-page-load"></a>
+                            </div>
+
+                            <i class="far fa-file-alt"></i>
+                            <h4 class="name"><span>Rebirth</span> Project 2</h4>
+                            <span class="category">Visual Art</span>
+                          </figure>
+
+                          <!-- Figure Visual Art 7 -->
+                          <figure class="item standard category_all category_visual-art">
+                            <div class="portfolio-item-img">
+                              <img   src="img/portfolio/visual-art/Peekijing.png" alt="Media Project 2" title="" />
+                              <a href="portfolio-1.html" class="ajax-page-load"></a>
+                            </div>
+
+                            <i class="far fa-file-alt"></i>
+                            <h4 class="name"><span>Rebirth</span> Project 2</h4>
+                            <span class="category">Visual Art</span>
+                          </figure>
+
+                          <!-- Figure Visual Art 8 -->
+                          <figure class="item standard category_all category_visual-art">
+                            <div class="portfolio-item-img">
+                              <img  src="img/portfolio/visual-art/Peeking.jpg" alt="Media Project 2" title="" />
+                              <a href="portfolio-1.html" class="ajax-page-load"></a>
+                            </div>
+
+                            <i class="far fa-file-alt"></i>
+                            <h4 class="name"><span>Rebirth</span> Project 2</h4>
+                            <span class="category">Visual Art</span>
+                          </figure>
+
+                          <!-- Figure Visual Art 9 -->
+                          <figure class="item standard category_all category_visual-art">
+                            <div class="portfolio-item-img">
+                              <img  src="img/portfolio/visual-art/PsyFaces.png" alt="Media Project 2" title="" />
+                              <a href="portfolio-1.html" class="ajax-page-load"></a>
+                            </div>
+
+                            <i class="far fa-file-alt"></i>
+                            <h4 class="name"><span>Rebirth</span> Project 2</h4>
+                            <span class="category">Visual Art</span>
+                          </figure>
+                          
+                        </div>
+                      </div>
+                      <!-- End of Portfolio Content -->
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- End of Portfolio Subpage -->
+
+              <!-- Blog Subpage -->
+              <section data-id="blog" class="animated-section">
+                <div class="section-content">
+                  <div class="page-title">
+                    <h2>Blog</h2>
+                    <h4>My Diary</h4>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <ul class="grid-filters blog-filters">
+                        <li class="active">
+                          <a class="filter btn btn-sm btn-link" data-filter=".category_all">All</a>
+                        </li>
+                        <li>
+                          <a class="filter btn btn-sm btn-link" data-filter=".category_design">Design</a>                          
+                        </li>
+                        <li>
+                          <a class="filter btn btn-sm btn-link" data-filter=".category_psychology">Psychology</a>              
+                        </li>
+                        <li>
+                          <a class="filter btn btn-sm btn-link" data-filter=".category_technology">Technology</a>
+                        </li>
+                        <li>
+                          <a class="filter btn btn-sm btn-link" data-filter=".category_art-and-culture">Art & Culture</a>
+                        </li>
+                      </ul>
+
+                      <div class="blog-masonry two-columns clearfix">
+                        
+                        <!-- Blog Post 1 -->
+                        <div class="item post-1 category_all category_design">
+                          <div class="blog-card">
+                            <div class="media-block">
+                              <div class="category">
+                                <a href="#" title="View all posts in Design">Design</a>
+                              </div>
+                              <a href="blog/design/fibonnaci.html">
+                                <img src="img/blog/design/fibonnaci.jpg" class="size-blog-masonry-image-two-c" alt="Fibonacci Ratio and what it is." title="" />
+                                <div class="mask"></div>
+                              </a>
+                            </div>
+                            <div class="post-info">
+                              <div class="post-date">6 March 2023</div>
+                              <a href="blog/design/fibonnaci.html">
+                                <h4 class="blog-item-title">Fibonacci Ratio and what it is.</h4>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End of Blog Post 1 -->
+
+                        <!-- Blog Post 2 -->
+                        <div class="item post-2 category_all category_psychology">
+                          <div class="blog-card">
+                            <div class="media-block">
+                              <div class="category">
+                                <a href="#" title="View all posts in Psychology">Psychology</a>
+                              </div>
+                              <a href="blog-post-1.html">
+                                <img src="img/blog/psychology/color.jpg" class="size-blog-masonry-image-two-c" alt="Hidden Psychological factors behind colors." title="" />
+                                <div class="mask"></div>
+                              </a>
+                            </div>
+                            <div class="post-info">
+                              <div class="post-date">6 March 2023</div>
+                              <a href="blog-post-1.html">
+                                <h4 class="blog-item-title">Hidden Psychological factors behind colors.</h4>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End of Blog Post 2 -->
+
+                        <!-- Blog Post 3 -->
+                        <div class="item post-1 category_all category_technology">
+                          <div class="blog-card">
+                            <div class="media-block">
+                              <div class="category">
+                                <a href="#" title="View all posts in Technology">Technology</a>
+                              </div>
+                              <a href="blog-post-1.html">
+                                <img src="img/blog/technology/ai.jpg" class="size-blog-masonry-image-two-c" alt="The benifits of Artificial Intelligence" title="" />
+                                <div class="mask"></div>
+                              </a>
+                            </div>
+                            <div class="post-info">
+                              <div class="post-date">6 March 2023</div>
+                              <a href="blog-post-1.html">
+                                <h4 class="blog-item-title">The benifits of Artificial Intelligence</h4>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End of Blog Post 3 -->
+
+                        <!-- Blog Post 4 -->
+                        <div class="item post-2 category_all category_art-and-culture">
+                          <div class="blog-card">
+                            <div class="media-block">
+                              <div class="category">
+                                <a href="#" title="View all posts in Art & culture">Art & culture</a>
+                              </div>
+                              <a href="blog-post-1.html">
+                                <img src="img/blog/art-culture/traditional-art.jpg" class="size-blog-masonry-image-two-c" alt="How does art and culture relate." title="" />
+                                <div class="mask"></div>
+                              </a>
+                            </div>
+                            <div class="post-info">
+                              <div class="post-date">6 March 2023</div>
+                              <a href="blog-post-1.html">
+                                <h4 class="blog-item-title">How does art and culture relate.</h4>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End of Blog Post 4 -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </section>
+              <!-- End of Blog Subpage -->
+
+              <!-- Contact Subpage -->
+              <section data-id="contact" class="animated-section">
+                <div class="section-content">
+                  <div class="page-title">
+                    <h2>Contact</h2>
+                    <h4>Get in Touch</h4>
+                  </div>
+
+                  <div class="row">
+                    <!-- Contact Info -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="lm-info-block gray-default">
+                        <i class="lnr lnr-map-marker"></i>
+                        <h4>Cape Town</h4>
+                        <span class="lm-info-block-value"></span>
+                        <span class="lm-info-block-text"></span>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="lm-info-block gray-default">
+                        <i class="lnr lnr-phone-handset"></i>
+                        <h4>071 873 7005</h4>
+                        <span class="lm-info-block-value"></span>
+                        <span class="lm-info-block-text"></span>
+                      </div>
+                    </div>
+
+                    <!-- <div class="col-xs-12 col-sm-4">
+                      <div class="lm-info-block gray-default">
+                        <i class="lnr lnr-envelope"></i>
+                        <h4><a href="#" class="__cf_email__">christiaanfourie60@gmail.com</a></h4>
+                        <span class="lm-info-block-value"></span>
+                        <span class="lm-info-block-text"></span>
+                      </div>
+                    </div> -->
+                    <!-- End of Contact Info -->
+                  </div>
+
+                  <div class="row">
+                     <!-- Google Map -->
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="white-space-20"></div>
+                      <!-- Google Map -->
+                      <div class="">
+                        <iframe data-v-0d029d18="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d411139.47615510126!2d18.409721965681367!3d-34.04010744941868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc500f8826eed7%3A0x687fe1fc2828aa87!2sCape%20Town!5e0!3m2!1sen!2sza!4v1662475720903!5m2!1sen!2sza" width="100%" height="100%" loading="lazy"></iframe>
+                      </div>
+                    </div>
+                    <!-- End of Google Map -->
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-2">
+                    </div>
+                    <!-- Contact Form -->
+                    <div class="col-xs-12 col-sm-8">
+                      <div class="white-space-30"></div>
+                      <div class="block-title">
+                        <h3>How Can I Help You?</h3>
+                      </div>
+
+                      <form id="contact_form" class="contact-form" action="contact_form/contact_form.php" method="post">
+
+                        <div class="messages"></div>
+
+                        <div class="controls two-columns">
+                          <div class="fields clearfix">
+                            <div class="left-column">
+                              <div class="form-group form-group-with-icon">
+                                <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Name is required.">
+                                <label>Full Name</label>
+                                <div class="form-control-border"></div>
+                                <div class="help-block with-errors"></div>
+                              </div>
+
+                              <div class="form-group form-group-with-icon">
+                                <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Valid email is required.">
+                                <label>Email Address</label>
+                                <div class="form-control-border"></div>
+                                <div class="help-block with-errors"></div>
+                              </div>
+
+                              <div class="form-group form-group-with-icon">
+                                <input id="form_subject" type="text" name="subject" class="form-control" placeholder="" required="required" data-error="Subject is required.">
+                                <label>Subject</label>
+                                <div class="form-control-border"></div>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                            <div class="right-column">
+                              <div class="form-group form-group-with-icon">
+                                <textarea id="form_message" name="message" class="form-control" placeholder="" rows="7" required="required" data-error="Please, leave me a message."></textarea>
+                                <label>Message</label>
+                                <div class="form-control-border"></div>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI" data-theme="dark"></div> -->
+      
+                          <input type="submit" class="button btn-send" value="Send message">
+                        </div>
+                      </form>
+                    </div>
+                    <!-- End of Contact Form -->
+                  </div>
+
+                </div>
+              </section>
+              <!-- End of Contact Subpage -->
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/animating.js"></script>
+    <script src="particles/particles.js"></script>
+
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src='js/isotope.pkgd.min.js'></script>
+    <script src='js/owl.carousel.min.js'></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>

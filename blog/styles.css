@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+body {
+  background-image: url(../img/backdrop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: azure;
+  font-family: 'Roboto', sans-serif;
+}
+
+  @media (max-width: 768px) {
+    article {
+      padding: 60px;
+      text-align: center;
+      background-color: rgba(25, 25, 25, 0.5);
+      z-index: 999;
+      overflow-y: scroll;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    article {
+      margin: 60px;
+      margin-left: 120px;
+      margin-right: 120px;
+      padding: 60px;
+      text-align: center;
+      background-color: rgba(25, 25, 25, 0.5);
+      z-index: 999;
+    }
+    .blog-image {
+      width: 60%;
+      height: 260px;
+      margin: auto;
+      display: flex;
+      object-fit: cover;
+      margin-bottom: 50px;
+    }
+  }
+  
+  @media (min-width: 992) {
+    .blog-image {
+      width: 50%;
+      height: 360px;
+      margin: auto;
+      display: flex;
+      object-fit: cover;
+      margin-bottom: 50px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    /* Styles go here */
+  }
+  
+  @media (orientation: portrait) {
+    /* Styles go here */
+  }
+  
+  @media (orientation: landscape) {
+    /* Styles go here */
+  }
+  
